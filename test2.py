@@ -7,7 +7,7 @@ import argparse
 import codecs
 import unidecode
 
-
+# yorum
 def to_ascii(text):
     return unidecode.unidecode(text).lower().strip()
 
