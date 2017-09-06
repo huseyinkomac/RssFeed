@@ -69,7 +69,7 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
     entries = []
     client = MongoClient('172.17.0.1', 27017)
-    c = client.test
+    c = client.rss
     with open("/var/lib/rss/rssKeysList.txt") as f:
         keys = f.read().split(",")
     if args.feeds_from_file:
