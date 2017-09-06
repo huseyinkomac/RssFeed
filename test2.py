@@ -7,7 +7,7 @@ import argparse
 import codecs
 import unidecode
 
-# yorum
+
 def to_ascii(text):
     return unidecode.unidecode(text).lower().strip()
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
         d = feedparser.parse(feed)
         entries.extend(d.entries)
     entries = sorted(entries, key=lambda k: k.published_parsed)
-    method_to_call = 'def', run(entries, keys)
+    run(entries, keys)
 
 
 
