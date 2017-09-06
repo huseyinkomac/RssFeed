@@ -58,7 +58,6 @@ def run(entries, keys):
                     if key in to_ascii(string):
                         result = feed_to_interaction(entry)
                         c.interaction.insert(result)
-                        print(result["created_at"])
 
 
 if __name__ == "__main__":
