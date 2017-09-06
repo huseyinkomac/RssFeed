@@ -70,7 +70,7 @@ if __name__ == "__main__":
     entries = []
     client = MongoClient('172.17.0.1', 27017)
     c = client.test
-    with open("rssKeysList.txt") as f:
+    with open("/var/lib/rss/rssKeysList.txt") as f:
         keys = f.read().split(",")
     if args.feeds_from_file:
         with codecs.open(args.feeds_from_file, mode='r', encoding='utf-8') as f:
