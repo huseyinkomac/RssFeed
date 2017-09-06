@@ -79,7 +79,10 @@ if __name__ == "__main__":
         feeds = args.feeds
     for feed in feeds:
         d = feedparser.parse(feed)
-        entries.extend(d.entries)
+        if d.entries[0]["published_parsed"]:
+            entries.extend(d.entries)
+        else:
+            pass
     entries = sorted(entries, key=lambda k: k.published_parsed)
     run(entries, keys)
 
