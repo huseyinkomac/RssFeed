@@ -13,7 +13,7 @@ def to_ascii(text):
 
 
 def get_last_interaction():
-    last_interaction = list(c.interaction.find({}).sort('$natural', -1).limit(1))
+    last_interaction = list(db.interaction.find({}).sort('$natural', -1).limit(1))
     if last_interaction:
         last_interaction = last_interaction[0]
     return last_interaction
