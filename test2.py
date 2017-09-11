@@ -79,7 +79,7 @@ if __name__ == "__main__":
         feeds = args.feeds
     for feed in feeds:
         d = feedparser.parse(feed)
-        if d.entries[0]["published_parsed"]:
+        if "published_parsed" in d.entries[0]:
             entries.extend(d.entries)
         else:
             pass
