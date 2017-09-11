@@ -57,7 +57,7 @@ def run(entries, keys):
                 for string in string_to_find:
                     if key in to_ascii(string):
                         result = feed_to_interaction(entry)
-                        c.interaction.insert(result)
+                        db.interaction.insert(result)
 
 
 if __name__ == "__main__":
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
     entries = []
     client = MongoClient('172.17.0.1', 27017)
-    c = client.rss
+    db = client.rss
     with open("/var/lib/rss/rssKeysList.txt") as f:
         keys = f.read().split(",")
     if args.feeds_from_file:
