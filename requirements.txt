@@ -1,5 +1,5 @@
-pymongo
-feedparser
-unidecode
-argparse
-urlparse2
+    pymongo
+    feedparser
+    unidecode
+    argparse
+    urlparse2
